@@ -31,7 +31,7 @@ pipeline{
         {
             steps{
                 sshagent(['SSH-ID']) {
-                sh 'ssh -o StrictHostKeyChecking=no centos@172.31.36.184 docker run -itd --name nginxcontainer -p 9000:80 yakkhub4881/myimage'
+                sh 'ssh -o StrictHostKeyChecking=no centos@172.31.36.184 docker run -itd --name nginxcontainer -p 9000:80 yakhub4881/myimage'
                  }
             }
         }
