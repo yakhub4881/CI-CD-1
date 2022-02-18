@@ -20,10 +20,10 @@ pipeline{
             steps{
                 withCredentials([string(credentialsId: 'DockerPasswd', variable: 'DockerPasswd')]) {
                 sh "docker login -u yakhub4881 -p ${DockerPasswd}"
-                sh 'docker tag myimage:v1.$BUILD_ID yakkhub4881/myimage:v1.$BUILD_ID'
-                sh 'docker tag myimage:v1.$BUILD_ID yakkhub4881/myimage:latest'
-                sh 'docker push yakkhub4881/myimage:v1.$BUILD_ID'
-                sh 'docker push yakkhub4881/myimage:latest'
+                sh 'docker tag myimage:v1.$BUILD_ID yakhub4881/myimage:v1.$BUILD_ID'
+                sh 'docker tag myimage:v1.$BUILD_ID yakhub4881/myimage:latest'
+                sh 'docker push yakhub4881/myimage:v1.$BUILD_ID'
+                sh 'docker push yakhub4881/myimage:latest'
                  }
             }
         }
